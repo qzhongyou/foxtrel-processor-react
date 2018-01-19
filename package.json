@@ -1,6 +1,6 @@
 {
   "name": "foxtrel-processor-react",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "基于webpack的react类型项目处理",
   "main": "index.js",
   "scripts": {
@@ -29,7 +29,8 @@
     "postcss-loader": "^0.9.1",
     "react-hot-loader": "^3.1.2",
     "style-loader": "^0.13.1",
-    "webpack": "2.6.1"
+    "webpack": "2.6.1",
+    "webpack-merge": "^4.1.1"
   },
   "author": "",
   "license": "ISC"
