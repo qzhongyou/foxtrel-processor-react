@@ -31,9 +31,9 @@ function hasNewstVendor(config, options) {
     //是否存在
     if (foxtrel.util.exists(filePath)) {
         let pathInfo = foxtrel.util.pathInfo(filePath);
-        let version = pathInfo.filename.match(/\d+\.?\d+$/)[0];
+        let version = pathInfo.filename.match(/@\d+\.?\d+$/);
         //是否为最新
-        if (version == options.vendorVersion) {
+        if (Array.isArray(version) && version[0] == options.vendorVersion) {
             return false;
         }
     }
@@ -59,7 +59,7 @@ module.exports = function (callback) {
         output: cache.getCachePath(),
         outputStatic: cache.getCachePath('static'),
         outputPage: cache.getCachePath('page'),
-        vendorVersion: flConfig.get('vendorVersion') || '1.0',
+        vendorVersion: flConfig.get('vendorVersion') || '@1.0',
         vendor: flConfig.get('vendor') || [],
         context: foxtrel.project.getProjectRoot('app/views'),
         publicPath: '/assets/'
