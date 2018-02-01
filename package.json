@@ -1,6 +1,6 @@
 {
   "name": "foxtrel-processor-react",
-  "version": "0.1.2",
+  "version": "0.2.2",
   "description": "基于webpack的react类型项目处理",
   "main": "index.js",
   "scripts": {
